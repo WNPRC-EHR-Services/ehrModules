@@ -96,8 +96,28 @@
                         <columnTitle>Date Requested</columnTitle>
                         <isHidden>true</isHidden>
                     </column>
+                    <column columnName="billingproject">
+                        <columnTitle>Billing Project</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="fastingtype">
+                        <columnTitle>Fasting Type</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="animaldelivery">
+                        <columnTitle>Animal Delivery</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="remainingTissues">
+                        <columnTitle>Remaining Tissues</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
+                    <column columnName="necropsyGrade">
+                        <columnTitle>Necropsy Grade</columnTitle>
+                        <isHidden>true</isHidden>
+                    </column>
                 </columns>
-            </table>
+            </ta
         </tables>
     </metadata>
 </query>
