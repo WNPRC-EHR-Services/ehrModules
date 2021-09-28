@@ -273,18 +273,6 @@
                 <nullable>true</nullable>
                 <isHidden>true</isHidden>
             </column>
-            <column columnName="taskid">
-                <isUserEditable>false</isUserEditable>
-                <nullable>true</nullable>
-                <isHidden>true</isHidden>
-            </column>
-            <column columnName="objectid">
-                <isUserEditable>false</isUserEditable>
-                <nullable>true</nullable>
-                <isHidden>true</isHidden>
-            </column>
-
-
         </columns>
     </table>
     <table tableName="requirements" tableDbType="TABLE">
@@ -432,22 +420,6 @@
                 <nullable>true</nullable>
                 <isHidden>true</isHidden>
             </column>
-            <column columnName="taskid">
-                <isUserEditable>false</isUserEditable>
-                <nullable>true</nullable>
-                <isHidden>true</isHidden>
-            </column>
-            <column columnName="objectid">
-                <isUserEditable>false</isUserEditable>
-                <nullable>true</nullable>
-                <isHidden>true</isHidden>
-            </column>
-            <column columnName="trackingflag">
-                <isUserEditable>true</isUserEditable>
-                <nullable>false</nullable>
-                <isHidden>false</isHidden>
-            </column>
-
         </columns>
     </table>
     <table tableName="requirementsperemployee" tableDbType="TABLE">
@@ -801,6 +773,113 @@
                     <fkColumnName>categoryname</fkColumnName>
                 </fk>
             </column>
+            <column columnName="container">
+                <isUserEditable>false</isUserEditable>
+                <isHidden>true</isHidden>
+                <fk>
+                    <fkDbSchema>core</fkDbSchema>
+                    <fkTable>containers</fkTable>
+                    <fkColumnName>entityid</fkColumnName>
+                </fk>
+            </column>
+            <column columnName="createdby">
+                <isUserEditable>false</isUserEditable>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="created">
+                <isUserEditable>false</isUserEditable>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="modifiedby">
+                <isUserEditable>false</isUserEditable>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="modified">
+                <isUserEditable>false</isUserEditable>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+        </columns>
+    </table>
+    <table tableName="EmployeePerUnit" tableDbType="TABLE">
+    <auditLogging>DETAILED</auditLogging>
+    <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+    <tableTitle>Employee Per Units</tableTitle>
+    <pkColumnName>rowid</pkColumnName>
+    <columns>
+        <column columnName="rowid">
+            <isAutoInc>true</isAutoInc>
+            <isKeyField>true</isKeyField>
+            <columnTitle>Key</columnTitle>
+        </column>
+        <column columnName="employeeid">
+            <isKeyField>true</isKeyField>
+            <columnTitle>Employee Id</columnTitle>
+        </column>
+        <column columnName="unit">
+            <columnTitle>Unit</columnTitle>
+        </column>
+        <column columnName="container">
+            <isUserEditable>false</isUserEditable>
+            <isHidden>true</isHidden>
+            <fk>
+                <fkDbSchema>core</fkDbSchema>
+                <fkTable>containers</fkTable>
+                <fkColumnName>entityid</fkColumnName>
+            </fk>
+        </column>
+        <column columnName="createdby">
+            <isUserEditable>false</isUserEditable>
+            <nullable>true</nullable>
+            <isHidden>true</isHidden>
+        </column>
+        <column columnName="created">
+            <isUserEditable>false</isUserEditable>
+            <nullable>true</nullable>
+            <isHidden>true</isHidden>
+        </column>
+        <column columnName="modifiedby">
+            <isUserEditable>false</isUserEditable>
+            <nullable>true</nullable>
+            <isHidden>true</isHidden>
+        </column>
+        <column columnName="modified">
+            <isUserEditable>false</isUserEditable>
+            <nullable>true</nullable>
+            <isHidden>true</isHidden>
+        </column>
+    </columns>
+</table>
+    <table tableName="EmployeePerEssential" tableDbType="TABLE">
+        <auditLogging>DETAILED</auditLogging>
+        <javaCustomizer class="org.labkey.ldk.query.DefaultTableCustomizer" />
+        <tableTitle>Employee Per Essential</tableTitle>
+        <pkColumnName>rowid</pkColumnName>
+        <columns>
+            <column columnName="rowid">
+                <isAutoInc>true</isAutoInc>
+                <isKeyField>true</isKeyField>
+                <columnTitle>Key</columnTitle>
+            </column>
+            <column columnName="employeeid">
+                <isKeyField>true</isKeyField>
+                <columnTitle>Employee Id</columnTitle>
+            </column>
+            <column columnName="requirementname">
+                <columnTitle>Requirement Name</columnTitle>
+                <fk>
+                    <fkDbSchema>ehr_compliancedb</fkDbSchema>
+                    <fkTable>requirements</fkTable>
+                    <fkColumnName>requirementname</fkColumnName>
+                </fk>
+            </column>
+            <column columnName="trackingflag">
+                <columnTitle>Essential</columnTitle>
+            </column>
+
             <column columnName="container">
                 <isUserEditable>false</isUserEditable>
                 <isHidden>true</isHidden>
