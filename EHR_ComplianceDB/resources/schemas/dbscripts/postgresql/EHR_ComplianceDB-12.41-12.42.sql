@@ -11,5 +11,6 @@ CREATE TABLE ehr_compliancedb.EmployeePerUnit
     taskid entityid,
     objectid entityid
 
-    CONSTRAINT PK_EmployeePerUnit PRIMARY KEY (RowId)
+    CONSTRAINT PK_EmployeePerUnits PRIMARY KEY (RowId)
 );
+GO
