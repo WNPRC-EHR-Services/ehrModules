@@ -1,8 +1,16 @@
---
--- ALTER TABLE ehr_compliancedb.RequirementsPerCategory add taskid entityid;
---
--- ALTER TABLE ehr_compliancedb.Employees add objectid entityid;
---
--- ALTER TABLE ehr_compliancedb.RequirementsPerCategory add objectid entityid;
---
--- ALTER TABLE ehr_compliancedb.RequirementsPerCategory add trackingflag nvarchar(50);
+CREATE TABLE ehr_compliancedb.EmployeePerUnit
+(
+    RowId INT IDENTITY(1,1) NOT NULL,
+    EmployeeId varchar(255) not null,
+    unit varchar(255) null,
+    Container ENTITYID NOT NULL,
+    CreatedBy USERID,
+    Created timestamp,
+    ModifiedBy USERID,
+    Modified timestamp,
+    taskid entityid,
+    objectid entityid
+
+    CONSTRAINT PK_EmployeePerUnits PRIMARY KEY (RowId)
+);
+GO

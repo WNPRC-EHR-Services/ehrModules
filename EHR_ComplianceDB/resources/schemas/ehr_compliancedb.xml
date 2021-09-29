@@ -816,7 +816,6 @@
             <columnTitle>Key</columnTitle>
         </column>
         <column columnName="employeeid">
-            <isKeyField>true</isKeyField>
             <columnTitle>Employee Id</columnTitle>
         </column>
         <column columnName="unit">
@@ -865,7 +864,6 @@
                 <columnTitle>Key</columnTitle>
             </column>
             <column columnName="employeeid">
-                <isKeyField>true</isKeyField>
                 <columnTitle>Employee Id</columnTitle>
             </column>
             <column columnName="requirementname">
