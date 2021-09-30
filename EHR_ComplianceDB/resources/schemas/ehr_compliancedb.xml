@@ -830,6 +830,17 @@
                 <fkColumnName>entityid</fkColumnName>
             </fk>
         </column>
+        <column columnName="taskid">
+            <isUserEditable>false</isUserEditable>
+            <nullable>true</nullable>
+            <isHidden>true</isHidden>
+        </column>
+        <column columnName="objectid">
+            <isUserEditable>false</isUserEditable>
+            <nullable>true</nullable>
+            <isHidden>true</isHidden>
+        </column>
+        <column colu
         <column columnName="createdby">
             <isUserEditable>false</isUserEditable>
             <nullable>true</nullable>
@@ -874,8 +885,22 @@
                     <fkColumnName>requirementname</fkColumnName>
                 </fk>
             </column>
+
+            <column columnName="taskid">
+                <isUserEditable>false</isUserEditable>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
+            <column columnName="objectid">
+                <isUserEditable>false</isUserEditable>
+                <nullable>true</nullable>
+                <isHidden>true</isHidden>
+            </column>
             <column columnName="trackingflag">
                 <columnTitle>Essential</columnTitle>
+                <isUserEditable>true</isUserEditable>
+                <nullable>false</nullable>
+                <isHidden>false</isHidden>
             </column>
 
             <column columnName="container">
